@@ -1,1 +1,21 @@
 @import "tailwindcss";
+
+.card-bg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom right, #9333ea, #2563eb);
+    transform: translate(100%, 100%);
+    transition: transform 0.5s ease-in-out;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.card-hover-effect:hover .card-bg {
+    transform: translate(0, 0);
+}
+
+.card-hover-effect:hover .viewProject{
+    box-shadow: 0 5px 30px rgb(35, 255, 46);
+    border: 2px solid rgb(35, 255, 46);
+    background-color:rgb(35, 255, 46);
+}

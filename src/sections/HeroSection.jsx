@@ -1,19 +1,18 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion } from "motion/react"
 import { Link } from 'react-scroll';
 import GridBackground from '../components/GridBackground';
 
 function HeroSection(){
     return (
-        <section id="hero" className="relative min-h-screen w-full flex items-center justify-center bg-[#0F111A] overflow-hidden py-20 lg:py-0">
+        <section id="hero" className="relative min-h-screen w-full flex items-center justify-centerbg-transparent sm:mb-20 lg:py-0 overflow-hidden">
             <GridBackground></GridBackground>
-            <div className="absolute inset-0 z-0 opacity-[0.15]" style={{backgroundImage: `linear-gradient(#ffffff10 1px, transparent 1px), linear-gradient(90deg, #ffffff10 1px, transparent 1px)`, backgroundSize: '50px 50px' }}></div>
             <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-600/20 blur-[120px] rounded-full z-0"></div>
             <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-600/10 blur-[120px] rounded-full z-0"></div>
 
             <div className="container mx-auto px-6 z-10 ">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center justify-center">
-                <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 1, ease: "easeOut" }} className='mt-20'>
+                <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 1, ease: "easeOut" }} className='mt-20 sm:mb-0 md:mb-0 sm:text-center' >
                     <h1 className="text-3xl md:text-4xl lg:text-6xl font-black leading-[1.1] text-white mb-6 tracking-tight">
                         Designing and developing <br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-purple-600 drop-shadow-sm">
@@ -26,7 +25,7 @@ function HeroSection(){
                     </p>
 
                     <div className="flex flex-wrap justify-center lg:justify-start gap-5">
-                        <Link to="projects" smooth={true} duration={800} offset={-80}>
+                        {/* <Link to="projects" smooth={true} duration={800} offset={-80}>
                             <motion.button whileHover={{ scale: 1.05, boxShadow: "0px 0px 25px rgba(168, 85, 247, 0.4)" }} whileTap={{ scale: 0.95 }} className="px-8 md:px-10 py-4 bg-purple-600 text-white font-bold rounded-2xl transition-all text-sm md:text-base">
                                 View My Work
                             </motion.button>
@@ -34,7 +33,12 @@ function HeroSection(){
 
                         <motion.button whileHover={{ scale: 1.05, borderColor: "rgba(255,255,255,0.5)" }} whileTap={{ scale: 0.95 }} className="px-8 md:px-10 py-4 border border-white/10 text-white font-bold rounded-2xl backdrop-blur-sm transition-all text-sm md:text-base">
                             Download CV
-                        </motion.button>
+                        </motion.button> */}
+                        <a href="/Akankshi_Gupta_CV.pdf" download>
+                            <motion.button whileHover={{ scale: 1.05, boxShadow: "0px 0px 25px rgba(168, 85, 247, 0.4)" }} whileTap={{ scale: 0.95 }} className="px-8 md:px-10 py-4 bg-purple-600 text-white font-bold rounded-2xl transition-all text-sm md:text-base">
+                                Download CV
+                            </motion.button>
+                            </a>
                     </div>
                 </motion.div>
 
@@ -123,10 +127,11 @@ function HeroSection(){
             </div>
 
             
-            <motion.div animate={{ y: [0, 10, 0] }} transition={{ duration: 2, repeat: Infinity }} className="hidden md:flex absolute bottom-10 left-1/2 -translate-x-1/2 flex-col items-center gap-2 opacity-30">
+            <motion.div animate={{ y: [0, 10, 0] }} transition={{ duration: 2, repeat: Infinity }} className="hidden md:flex absolute bottom-5 left-1/2 -translate-x-1/2 flex-col items-center gap-2 opacity-30 z-1">
                 <div className=" w-[1px] h-12 bg-gradient-to-b from-white to-transparent"></div>
                 <span className="text-[10px] uppercase tracking-[0.5em] text-white">Scroll</span>
             </motion.div>
+            <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-b from-transparent to-[#0F111A]" />
         </section>
     );
 }
