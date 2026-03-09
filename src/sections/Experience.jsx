@@ -1,4 +1,4 @@
-import KanImage from "../assets/Kan-innovations.png"
+import KanImage from "../assets/kan-innovations.png"
 
 function Experience(){
     return(
