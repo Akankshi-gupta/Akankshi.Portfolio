@@ -23,7 +23,7 @@ const skillCategories = [
 
 function Skills(){
     return(
-        <section id="skills" className="flex justify-center relative overflow-hidden py-14 bg-[#0F111A]">
+        <section id="skills" className="min-h-screen flex justify-center relative overflow-hidden py-14 bg-[#0F111A]">
             {/* <div className="absolute top-0 w-full h-24 bg-gradient-to-t from-transparent to-[#0F111A]"></div> */}
             <div className="absolute top-1/4 left-1/4 w-86 h-86 bg-purple-600/20 blur-[120px] rounded-full z-0"></div>
             <div className="absolute bottom-1/4 right-1/4 w-86 h-86 bg-cyan-600/10 blur-[120px] rounded-full z-0"></div>
@@ -35,7 +35,7 @@ function Skills(){
                     <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-cyan-500 mx-auto mt-6 rounded-full"></div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     {skillCategories.map((category, idx) => (
                         <motion.div
                         key={idx}
